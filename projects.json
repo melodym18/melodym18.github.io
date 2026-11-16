@@ -1,0 +1,169 @@
+[
+  {
+    "id": "student-dashboard",
+    "title": "Student Performance Dashboard",
+    "kind": "Cloud data visualization",
+    "context": "Group project for Database Concepts & Programming",
+    "role": "Partner B: frontend and cloud setup",
+    "summary": "A cloud-hosted analytics dashboard exploring what affects 1,000 students' exam scores in math, reading and writing.",
+    "tech": [
+      "Google Cloud",
+      "Compute Engine",
+      "Cloud SQL",
+      "MySQL",
+      "Metabase",
+      "gcloud CLI"
+    ],
+    "cover": {
+      "src": "images/projects/dashboard/dashboard-thumb.jpg",
+      "alt": "Metabase dashboard with bar charts comparing average exam scores by gender, lunch type and test preparation"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "images/projects/dashboard/dashboard.jpg",
+        "alt": "Full Metabase dashboard titled Students Performance on Exams",
+        "caption": "The finished dashboard: 10 visualizations answering 7 questions"
+      }
+    ],
+    "overview": "For our Database Concepts & Programming class, my partner and I built a cloud-hosted analytics dashboard using a Kaggle dataset of 1,000 students' exam scores. It shows how factors like test preparation, lunch type, parental education and gender relate to scores.",
+    "problem": "We wanted to understand which factors outside the classroom influence student performance, and what the data says about unequal access to academic resources. That meant putting the data in a secure cloud database and building a visual layer that makes the patterns easy to read.",
+    "contributions": [
+      "Set up a Linux virtual machine on Google Compute Engine from the command line, with a startup script that installed Metabase automatically.",
+      "Reserved a static IP address so the dashboard's address never changed, and attached it to the VM.",
+      "Wrote a firewall rule that only let our two home networks reach Metabase, instead of opening it to the whole internet.",
+      "Connected Metabase to our Cloud SQL MySQL database over an encrypted SSL connection, using a dedicated database account.",
+      "Designed 10 visualizations (bar charts, row charts, tables, a donut chart and a summary number) answering 7 research questions."
+    ],
+    "teamNote": "My partner, Anusuya Thapa, built the backend: the Cloud SQL database, schema, views, stored procedures and backups.",
+    "highlights": {
+      "title": "What the data showed",
+      "items": [
+        "Students who completed the test preparation course scored higher in all three subjects.",
+        "Students on free or reduced lunch (35.5% of the dataset) scored lower on average than students on standard lunch.",
+        "Students whose parents held a master's degree scored highest; those whose parents held a high school diploma scored lowest.",
+        "Only 19.3% of students (193 of 1,000) scored above 80 in math.",
+        "60.4% of students (604 of 1,000) scored higher in reading than in math."
+      ]
+    },
+    "learned": "I learned to provision and secure cloud infrastructure from the command line, connect an analytics tool to a managed database, and turn raw data into charts that answer specific questions. I also practiced splitting frontend and backend work cleanly with a partner.",
+    "links": [
+      {
+        "label": "View dashboard (PDF)",
+        "url": "documents/student-dashboard.pdf"
+      },
+      {
+        "label": "View presentation (PDF)",
+        "url": "documents/student-dashboard-slides.pdf"
+      }
+    ],
+    "galleryStyle": "wide"
+  },
+  {
+    "id": "reading-journal",
+    "title": "Reading Journal",
+    "kind": "Android app",
+    "context": "Solo project for MAC 220, Android App Development",
+    "role": "Sole developer",
+    "summary": "An Android app for keeping a personal record of every book you finish: the cover, your rating, favorite quote, review and notes.",
+    "tech": [
+      "Kotlin",
+      "Android SDK",
+      "Fragments",
+      "ViewModel",
+      "LiveData",
+      "RecyclerView",
+      "Material Design"
+    ],
+    "cover": {
+      "src": "images/projects/reading-journal/book-list-poster.jpg",
+      "alt": "Reading Journal app showing a list of book cards with covers, authors and ratings"
+    },
+    "media": [
+      {
+        "type": "video",
+        "src": "images/projects/reading-journal/book-list.mp4",
+        "poster": "images/projects/reading-journal/book-list-poster.jpg",
+        "alt": "Scrolling through the list of saved books",
+        "caption": "Browsing saved books"
+      },
+      {
+        "type": "video",
+        "src": "images/projects/reading-journal/add-edit.mp4",
+        "poster": "images/projects/reading-journal/add-edit-poster.jpg",
+        "alt": "Filling in a new journal entry with a cover, rating and review",
+        "caption": "Adding an entry"
+      },
+      {
+        "type": "video",
+        "src": "images/projects/reading-journal/book-detail.mp4",
+        "poster": "images/projects/reading-journal/book-detail-poster.jpg",
+        "alt": "Opening a book's full journal entry",
+        "caption": "Viewing an entry"
+      },
+      {
+        "type": "image",
+        "src": "images/projects/reading-journal/delete-confirm.jpg",
+        "alt": "Confirmation dialog asking whether to delete the journal entry",
+        "caption": "Delete confirmation"
+      }
+    ],
+    "overview": "Reading Journal is an Android app for keeping a personal record of every book you finish. Each entry holds the cover, title, author, a star rating, a favorite quote, a summary, a review and personal notes.",
+    "problem": "I combined two of my favorite hobbies, reading and journaling. I already highlight passages and save notes on my Kindle, and journaling helps me sort out my thoughts. I wanted one simple place to remember why I loved a book, or why I didn't.",
+    "contributions": [
+      "Built three screens as fragments (the book list, the add/edit form and the book detail view), with back navigation between them.",
+      "Used a ViewModel and LiveData to keep book data separate from the screens, so the list updates itself whenever a book is added, edited or deleted.",
+      "Saved entries on the device as JSON in SharedPreferences, so they're still there after the app is closed.",
+      "Let users pick a cover image from their phone and rate books in half-star steps.",
+      "Required a title before an entry can be saved."
+    ],
+    "highlights": {
+      "title": "Challenges I solved",
+      "items": [
+        "Keeping cover images: Android can block access to a chosen photo later, so the app asks to keep permission for it, and shows a placeholder if the image still can't load.",
+        "Accidental deletes: Edit and Delete sat side by side, so I added a confirmation pop-up before anything is deleted."
+      ]
+    },
+    "learned": "I'm proud that I built it around hobbies I love and kept it simple and easy to use. Next, I'd like to add genre categories, sections for book series, and cloud sync so the journal works across devices.",
+    "links": [],
+    "coverStyle": "phone",
+    "galleryStyle": "phones"
+  },
+  {
+    "id": "thinkfast",
+    "title": "ThinkFast",
+    "kind": "Web app",
+    "context": "Group project for System Analysis & Design",
+    "role": "Developer 2",
+    "summary": "A pop quiz game that makes studying more engaging, with quizzes across science, math, computer science, history, music and general knowledge.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JSON",
+      "Netlify"
+    ],
+    "cover": null,
+    "media": [],
+    "overview": "ThinkFast is a web-based pop quiz game designed to make learning more engaging. Users test their knowledge across subjects including science, mathematics, computer science, history, music and general knowledge.",
+    "problem": "Students and lifelong learners can struggle to stay focused when studying. ThinkFast turns knowledge checks into a game, with feedback on how you did.",
+    "contributions": [
+      "Structured the web pages and app content in HTML.",
+      "Worked on styling and layout in CSS to build the interface.",
+      "Helped build the feature that lets players revisit questions they answered incorrectly, added after feedback from our stakeholders.",
+      "Deployed the site through Netlify."
+    ],
+    "teamNote": "I worked with another developer on most of the code.",
+    "highlights": {
+      "title": "How we planned it",
+      "items": [
+        "SWOT analysis of the proposed system.",
+        "Decision trees and decision tables to model quiz results.",
+        "Context-level diagrams of how the system works.",
+        "Gantt charts and sprint planning in ProjectLibre."
+      ]
+    },
+    "learned": "This project gave me experience collaborating on a web app from planning and design through implementation and deployment, and building a feature in response to stakeholder feedback.",
+    "links": []
+  }
+]
