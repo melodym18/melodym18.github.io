@@ -148,8 +148,18 @@
       "JSON",
       "Netlify"
     ],
-    "cover": null,
-    "media": [],
+    "cover": {
+      "src": "images/projects/thinkfast/home.jpg",
+      "alt": "ThinkFast home screen with options for quiz topic, difficulty timer and number of questions"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "images/projects/thinkfast/home.jpg",
+        "alt": "ThinkFast home screen with options for quiz topic, difficulty timer and number of questions",
+        "caption": "Setting up a quiz: topic, timer and number of questions"
+      }
+    ],
     "overview": "ThinkFast is a web-based pop quiz game designed to make learning more engaging. Users test their knowledge across subjects including science, mathematics, computer science, history, music and general knowledge.",
     "problem": "Students and lifelong learners can struggle to stay focused when studying. ThinkFast turns knowledge checks into a game, with feedback on how you did.",
     "contributions": [
@@ -169,6 +179,13 @@
       ]
     },
     "learned": "This project gave me experience collaborating on a web app from planning and design through implementation and deployment, and building a feature in response to stakeholder feedback.",
-    "links": []
+    "links": [
+      {
+        "label": "View live site",
+        "url": "https://thinkfastpopquizgame.netlify.app"
+      }
+    ],
+    "coverStyle": "contain",
+    "galleryStyle": "wide"
   }
 ]

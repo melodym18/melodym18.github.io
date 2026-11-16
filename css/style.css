@@ -286,6 +286,19 @@ p { margin: 0 0 1em; }
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
+.project-cover--contain {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.project-cover--contain img {
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
 .project-cover--empty {
   display: grid;
   place-items: center;

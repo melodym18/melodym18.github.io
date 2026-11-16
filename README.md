@@ -30,7 +30,7 @@ Fields in each entry:
 | `summary` | One or two sentences on the card |
 | `tech` | List of technologies |
 | `cover` | Main image: `{ "src": "...", "alt": "..." }`, or `null` for a text placeholder |
-| `coverStyle` | Optional. `"phone"` frames a tall phone screenshot |
+| `coverStyle` | Optional. `"phone"` frames a tall phone screenshot; `"contain"` shows a wide screenshot whole instead of cropping it |
 | `media` | Images or videos shown in the case study. Videos use `"type": "video"` with an `.mp4` and a `poster` image |
 | `galleryStyle` | Optional. `"phones"` for phone screenshots, `"wide"` for one large image |
 | `overview`, `problem`, `learned` | Paragraphs in the case study |

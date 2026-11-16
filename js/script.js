@@ -27,7 +27,7 @@ function renderCover(project) {
       ])
     ]);
   }
-  const style = project.coverStyle === "phone" ? " project-cover--phone" : "";
+  const style = project.coverStyle ? " project-cover--" + project.coverStyle : "";
   return el("div", { className: "project-cover" + style }, [
     el("img", { src: project.cover.src, alt: project.cover.alt, loading: "lazy" })
   ]);
